@@ -1,5 +1,4 @@
 import { Client, Events, GatewayIntentBits } from 'discord.js'
-import TOKEN from 'config.json'
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -10,4 +9,4 @@ client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
